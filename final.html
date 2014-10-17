@@ -105,11 +105,23 @@
    
         
         getawesome.addEventListener('click', function(e){
-            var getawesomebox = document.getElementById("awesome-box"); 
+            
             e.preventDefault();
-            getawesomebox.classList.toggle("hidden");
-        })
+            
+            var time = setInterval(function () {
+                var getawesomebox = document.getElementById("awesome-box"); 
+                getawesomebox.classList.toggle("hidden");
+        }, 100)
 
+            var move = setInterval(function() {
+                var moveawesomebox = document.getElementById("awesome-box");
+                console.log(parseInt(moveawesomebox.style.left));
+                //  + 300;
+                // console.log(awesomenum);
+                //parseInt(moveawesomebox.style.left)
+                debugger;  
+            }, 1000)
+        })
         </script>
     <!--
     The "awesome-box" div below is hidden using a CSS class called "hidden"
